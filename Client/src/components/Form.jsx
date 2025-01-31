@@ -21,10 +21,28 @@ export default function Form() {
   }
   //we need to add an event to our form to submit it --> onSubmit
   //we need the event listener and the event handler
+
+  //   function handleSubmit(event) {
+  //     event.preventDefault();
+  //     console.log("Submitted Data:", { username, comment }); // console only logs when the form is submitted. Chat gpt offered this option
+  //   }
+  //=============================================================================================
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Submitted Data:", { username, comment }); // console only logs when the form is submitted. Chat gpt offered this option
+    let newData = { client_name: username, comment: comment };
+    fetch("http://localhost:8080/add-comment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newData),
+    });
+    console.log("Submitted data: ", newData);
+    setUsername("");
+    setComment("");
   }
+
+  //=============================================================================================
 
   return (
     <>

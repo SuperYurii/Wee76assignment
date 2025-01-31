@@ -42,7 +42,7 @@ app.get("/clients", async (req, res) => {
 });
 
 //I want to CREATE a new entry in the clients table
-app.post("/add-client", (req, res) => {
+app.post("/add-comment", (req, res) => {
   //we need an element that stores the new data we are adding to the database
   //Our request parameter has a body object to store this new data
   const newData = req.body;
