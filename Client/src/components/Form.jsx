@@ -16,7 +16,7 @@ export default function Form() {
 
   function handleChangeComment(event) {
     //this is tracking the changes in the comment input value
-    setComment(event.target.value); //value = "m@gmail.com"
+    setComment(event.target.value);
     console.log(event.target.value);
   }
   //we need to add an event to our form to submit it --> onSubmit
@@ -59,7 +59,7 @@ export default function Form() {
           onChange={handleChangeUsername}
           value={username} //this is our state variable
         />
-        <label htmlFor="comment">Email: </label>
+        <label htmlFor="comment">Comment: </label>
         <input
           type="text"
           id="comment"

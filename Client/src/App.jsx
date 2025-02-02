@@ -1,12 +1,12 @@
 import Form from "./components/Form";
 import Comments from "./components/comments";
-
+import "./App.css";
 export default function App() {
   return (
-    <>
-      <h1>App</h1>
+    <div className="app-container">
+      <h1>Super-Duper App</h1>
       <Form />
       <Comments />
-    </>
+    </div>
   );
 }
